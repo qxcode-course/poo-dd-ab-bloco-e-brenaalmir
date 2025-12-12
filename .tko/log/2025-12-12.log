@@ -1,0 +1,24 @@
+2025-12-12 12:41:30, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-12 12:41:32, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-12 12:41:40, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-12 12:41:43, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100, size:0
+2025-12-12 13:17:00, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-12 13:17:17, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-12 13:17:18, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:68
+2025-12-12 13:17:21, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-12 13:17:37, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-12 13:17:40, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0
+2025-12-12 13:18:59, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:68
+2025-12-12 13:19:16, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-12 13:19:36, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-12 13:19:38, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100, size:0
+2025-12-12 14:02:03, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:73
+2025-12-12 14:04:53, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:71
+2025-12-12 14:07:29, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-12 14:12:19, SELF, v:1, k:poo@pagamento, rate:100, human:_, guide:_, alone:8, study:70
+2025-12-12 14:12:23, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-12 14:12:25, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-12 14:13:25, SELF, v:1, k:poo@zoo, rate:100, human:_, guide:_, alone:8, study:50
+2025-12-12 14:14:27, MOVE, v:1, k:poo@shapes, mode:PICK
+2025-12-12 14:14:28, EXEC, v:1, k:poo@shapes, mode:FULL, rate:0, size:0
+2025-12-12 14:15:02, MOVE, v:1, k:poo@shapes, mode:BACK
