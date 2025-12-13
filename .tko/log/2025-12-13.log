@@ -139,3 +139,32 @@
 2025-12-13 17:06:23, MOVE, v:1, k:poo@shapes, mode:BACK
 2025-12-13 17:06:28, MOVE, v:1, k:poo@estacionamento, mode:PICK
 2025-12-13 17:06:42, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 17:07:48, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 17:14:18, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-13 19:34:12, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 19:34:15, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:68
+2025-12-13 19:40:17, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:97
+2025-12-13 19:40:28, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:97
+2025-12-13 19:40:30, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-13 19:42:35, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:75, size:97
+2025-12-13 19:42:37, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:75
+2025-12-13 19:43:44, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100, size:97
+2025-12-13 19:43:49, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 19:43:59, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 19:44:00, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100
+2025-12-13 19:44:06, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 19:44:30, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 19:44:32, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100
+2025-12-13 19:44:32, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100
+2025-12-13 19:57:03, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 19:57:08, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 19:57:09, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100
+2025-12-13 19:57:11, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100
+2025-12-13 20:01:03, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 20:01:08, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 20:17:16, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 20:17:31, MOVE, v:1, k:poo@shapes, mode:PICK
+2025-12-13 20:17:33, EXEC, v:1, k:poo@shapes, mode:FULL, rate:100
+2025-12-13 20:17:34, MOVE, v:1, k:poo@shapes, mode:BACK
+2025-12-13 20:18:10, SELF, v:1, k:poo@shapes, rate:100, human:_, iagen:_, guide:_, alone:7, study:120
+2025-12-13 20:18:40, SELF, v:1, k:poo@estacionamento, rate:100, human:_, iagen:_, alone:7, study:60

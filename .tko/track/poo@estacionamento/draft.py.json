@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2025-12-13_17-02-06",
-            "content": "",
+            "content": "@@ -1,1689 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Veiculo(ABC):%0A    def __init__(self, tipo, id, entrada):%0A        self.tipo = tipo%0A        self.id = id%0A        self.entrada = entrada%0A%0A    @abstractmethod%0A    def calcularValor(self, saida):%0A        pass%0A%0A    def toString(self):%0A        return(self.tipo.rjust(10, %22_%22) + %22 : %22 + self.id.rjust(10, %22_%22) + %22 : %22 + str(self.entrada))%0A%0A%0Aclass Bike(Veiculo):%0A    def __init__(self, id, entrada):%0A        super().__init__(%22Bike%22, id, entrada)%0A%0A    def calcularValor(self, saida):%0A        return 3.0%0A%0A%0Aclass Moto(Veiculo):%0A    def __init__(self, id, entrada):%0A        super().__init__(%22Moto%22, id, entrada)%0A%0A    def calcularValor(self, saida):%0A        minuttos = saida - self.entrada%0A        return minutos / 20%0A%0A%0Aclass Carro(Veiculo):%0A    def __init__(self, id, entrada):%0A        super().__init__(%22Carro%22, id, entrada)%0A%0A    def calcularValor(self, saida):%0A        minutos = saida - self.entrada%0A        valor = minutos / 10%0A        return valor if valor %3E= 5 else 5.0%0A%0A%0Aclass Estacionamento:%0A    def __init__(self):%0A        self.veiculos = %7B%7D%0A        self.hora_atual = 0%0A%0A    def tempo(self, minutos):%0A        self.hora_atual = 0%0A%0A    def estacionar(self, tipo, id):%0A        if tipo == %22bike%22:%0A            v = Bike(id, self.hora_atual)%0A        elif tipo == %22moto%22:%0A            v = Moto(id, self.hora_atual)%0A        else:%0A            v = Carro(id, self.hora_atual)%0A        self.veiculos%5Bid%5D = v%0A%0A    def pagar(self, id):%0A        v = self.veiculos%5Bid%5D%0A        valor = v.calcularValor(self.hora_atual)%0A        print(f%22%7Bv.tipo%7D chegou %7Bv.entrada%7D saiu %7Bself.hora_atual%7D. Pagar R$ %7Bvalor:.2f%7D%22)%0A        del self.veiculos%5Bid%5D%0A%0A    def show(self):%0A        for \n",
             "lines": "0"
+        },
+        {
+            "label": "2025-12-13_19-34-15",
+            "content": "@@ -1686,626 +1686,4 @@\n for \n-v in self.veiculos.values():%0A            print(v.toString())%0A        print(f%22Hora atual: %7Bself.hora_atual%7D%22)%0A%0A%0Adef main():%0A    est = Estacionamento()%0A    while Tru:%0A        line = input().strip()%0A        if not line:%0A            continue%0A        print(%22$%22 + line)%0A        args = line.split()%0A%0A        if args%5B0%5D == %22tempo%22:%0A            est.tempo(int(args%5B1%5D))%0A%0A        elif args%5B0%5D == %22estacionar%22:%0A            est.estacionar(args%5B1%5D, args%5B2%5D)%0A%0A        elif args%5B0%5D == %22pagar%22:%0A            est.pagar(args%5B1%5D)%0A%0A        elif args%5B0%5D == %22show%22:%0A            est.show()%0A%0A        elif args%5B0%5D == %22end%22:%0A            break%0A%0Amain()\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-12-13_19-40-17",
+            "content": "@@ -1845,17 +1845,16 @@\n hile Tru\n-e\n :%0A      \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-13_19-40-28",
+            "content": "@@ -1159,18 +1159,11 @@\n ual \n-+\n = \n-minutos\n+0\n %0A%0A  \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-13_19-42-35",
+            "content": "@@ -677,32 +677,33 @@\n ):%0A        minut\n+t\n os = saida - sel\n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-13_19-43-44",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, tipo, id, entrada):\n        self.tipo = tipo\n        self.id = id\n        self.entrada = entrada\n\n    @abstractmethod\n    def calcularValor(self, saida):\n        pass\n\n    def toString(self):\n        return(self.tipo.rjust(10, \"_\") + \" : \" + self.id.rjust(10, \"_\") + \" : \" + str(self.entrada))\n\n\nclass Bike(Veiculo):\n    def __init__(self, id, entrada):\n        super().__init__(\"Bike\", id, entrada)\n\n    def calcularValor(self, saida):\n        return 3.0\n\n\nclass Moto(Veiculo):\n    def __init__(self, id, entrada):\n        super().__init__(\"Moto\", id, entrada)\n\n    def calcularValor(self, saida):\n        minutos = saida - self.entrada\n        return minutos / 20\n\n\nclass Carro(Veiculo):\n    def __init__(self, id, entrada):\n        super().__init__(\"Carro\", id, entrada)\n\n    def calcularValor(self, saida):\n        minutos = saida - self.entrada\n        valor = minutos / 10\n        return valor if valor >= 5 else 5.0\n\n\nclass Estacionamento:\n    def __init__(self):\n        self.veiculos = {}\n        self.hora_atual = 0\n\n    def tempo(self, minutos):\n        self.hora_atual += minutos\n\n    def estacionar(self, tipo, id):\n        if tipo == \"bike\":\n            v = Bike(id, self.hora_atual)\n        elif tipo == \"moto\":\n            v = Moto(id, self.hora_atual)\n        else:\n            v = Carro(id, self.hora_atual)\n        self.veiculos[id] = v\n\n    def pagar(self, id):\n        v = self.veiculos[id]\n        valor = v.calcularValor(self.hora_atual)\n        print(f\"{v.tipo} chegou {v.entrada} saiu {self.hora_atual}. Pagar R$ {valor:.2f}\")\n        del self.veiculos[id]\n\n    def show(self):\n        for v in self.veiculos.values():\n            print(v.toString())\n        print(f\"Hora atual: {self.hora_atual}\")\n\n\ndef main():\n    est = Estacionamento()\n    while True:\n        line = input().strip()\n        if not line:\n            continue\n        print(\"$\" + line)\n        args = line.split()\n\n        if args[0] == \"tempo\":\n            est.tempo(int(args[1]))\n\n        elif args[0] == \"estacionar\":\n            est.estacionar(args[1], args[2])\n\n        elif args[0] == \"pagar\":\n            est.pagar(args[1])\n\n        elif args[0] == \"show\":\n            est.show()\n\n        elif args[0] == \"end\":\n            break\n\nmain()",
+            "lines": "97"
         }
     ]
 }
